@@ -1,0 +1,62 @@
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: sans-serif;
+    -fx-background-color: #DCDCDC;
+}
+.label{
+    -fx-font-size: 16px;
+}
+.label-error{
+    -fx-font-size: 12px;
+    -fx-text-fill: #ff0000;
+}
+.title{
+    -fx-text-fill: #0275d8;
+    -fx-font-size: 25px;
+}
+
+.text-field{
+    -fx-font-size: 18px;
+}
+
+.btn{
+    -fx-font-size: 16px;
+    -fx-padding: 7px 20px 7px 20px;
+}
+.btn-primary{
+    -fx-background-color: #0275d8;
+}
+
+.btn-info{
+    -fx-background-color: #5bc0de;
+}
+
+.btn-success{
+    -fx-background-color: #5cb85c;
+}
+
+.btn-danger{
+    -fx-background-color: #d9534f;
+}
+
+.btn-warning{
+    -fx-background-color: #f0ad4e;
+}
+.text-light{
+    -fx-text-fill: #fff;
+}
+.text-bold{
+    -fx-font-weight: bold;
+}
+.text-dark{
+    -fx-text-fill: #fff;
+}
+.text-success{
+    -fx-text-fill: #5cb85c;
+}
+.logo-text{
+    -fx-font-size: 22px;
+}
+.header{
+    -fx-background-color: #5cb85c;
+}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="435.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.studentapp.DashboardController">
+   <children>
+      <BorderPane layoutX="203.0" layoutY="41.0" prefHeight="481.0" prefWidth="739.0" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="105.0" prefWidth="755.0" styleClass="btn-primary" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="16.0" layoutY="13.0" stylesheets="@../css/style.css" text="Student">
+                     <styleClass>
+                        <String fx:value="logo-text" />
+                        <String fx:value="text-bold" />
+                        <String fx:value="text-light" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="101.0" layoutY="13.0" stylesheets="@../css/style.css" text="App">
+                     <styleClass>
+                        <String fx:value="logo-text" />
+                        <String fx:value="text-bold" />
+                        <String fx:value="text-light" />
+                        <String fx:value="btn-warning" />
+                     </styleClass>
+                     <padding>
+                        <Insets left="5.0" right="3.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="598.0" layoutY="26.0" stylesheets="@../css/style.css" text="Welcome: ">
+                     <styleClass>
+                        <String fx:value="label" />
+                        <String fx:value="text-light" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="lblUser" layoutX="683.0" layoutY="26.0" stylesheets="@../css/style.css">
+                     <styleClass>
+                        <String fx:value="label" />
+                        <String fx:value="text-bold" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="194.0" layoutY="59.0" stylesheets="@../css/style.css" text="Student Information">
+                     <styleClass>
+                        <String fx:value="text-light" />
+                        <String fx:value="logo-text" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <VBox prefHeight="330.0" prefWidth="178.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#addStudent" prefHeight="49.0" prefWidth="200.0" text="Add Student">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-success" />
+                        <String fx:value="text-light" />
+                        <String fx:value="text-bold" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#updateStudent" prefHeight="49.0" prefWidth="200.0" text="Update">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                        <String fx:value="text-light" />
+                        <String fx:value="text-bold" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#searchStudent" prefHeight="49.0" prefWidth="200.0" text="Search">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-info" />
+                        <String fx:value="text-light" />
+                        <String fx:value="text-bold" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="49.0" prefWidth="200.0" text="Delete">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-danger" />
+                        <String fx:value="text-light" />
+                        <String fx:value="text-bold" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefHeight="49.0" prefWidth="200.0" text="Logout">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-warning" />
+                        <String fx:value="text-light" />
+                        <String fx:value="text-bold" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="20.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="330.0" prefWidth="539.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="tfName" layoutX="21.0" layoutY="48.0" prefHeight="39.0" prefWidth="247.0" styleClass="text-field" />
+                  <Label layoutX="21.0" layoutY="17.0" text="Full Name" />
+                  <Label layoutX="304.0" layoutY="17.0" text="ID" />
+                  <TextField fx:id="tfId" layoutX="304.0" layoutY="48.0" prefHeight="39.0" prefWidth="252.0" styleClass="text-field" />
+                  <TableView fx:id="tblData" layoutX="20.0" layoutY="141.0" prefHeight="167.0" prefWidth="535.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="241.0" text="ID" />
+                      <TableColumn fx:id="colName" prefWidth="293.0" text="Name" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="lblName" layoutX="21.0" layoutY="87.0" styleClass="label-error" />
+                  <Label fx:id="lblId" layoutX="304.0" layoutY="87.0" styleClass="label-error" />
+                  <Label fx:id="lblSuccess" layoutX="182.0" layoutY="116.0" styleClass="text-success" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
