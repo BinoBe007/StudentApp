@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.mycompany.studentapp.LoginController">
+   <children>
+      <HBox layoutX="151.0" layoutY="37.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="399.0" fitWidth="264.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/back.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="400.0" prefWidth="337.0" stylesheets="@../css/style.css">
+               <children>
+                  <Label layoutX="33.0" layoutY="37.0" styleClass="title" text="Login" />
+                  <TextField fx:id="tfUser" layoutX="30.0" layoutY="113.0" prefHeight="39.0" prefWidth="279.0" styleClass="text-field" />
+                  <PasswordField fx:id="pfPass" layoutX="29.0" layoutY="192.0" prefHeight="39.0" prefWidth="279.0" styleClass="text-field" />
+                  <Button fx:id="btnLogin" layoutX="126.0" layoutY="286.0" mnemonicParsing="false" text="Login">
+                     <styleClass>
+                        <String fx:value="text-bold" />
+                        <String fx:value="btn" />
+                        <String fx:value="text-light" />
+                        <String fx:value="btn-primary" />
+                     </styleClass>
+                  </Button>
+                  <Label layoutX="30.0" layoutY="85.0" text="Username" />
+                  <Label layoutX="30.0" layoutY="166.0" text="Password" />
+                  <Label fx:id="lblError" layoutX="30.0" layoutY="243.0" styleClass="label-error" />
+                  <Button fx:id="btnCancel" layoutX="218.0" layoutY="286.0" mnemonicParsing="false" text="Cancel">
+                     <styleClass>
+                        <String fx:value="text-bold" />
+                        <String fx:value="btn" />
+                        <String fx:value="text-light" />
+                        <String fx:value="btn-danger" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
